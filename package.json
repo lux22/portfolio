@@ -1,0 +1,11 @@
+{
+  "name": "responsive",
+  "version": "1.0.0",
+  "description": "portfolio",
+  "main": "index.js",
+  "scripts": {
+    "preprocessor": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "",
+  "license": "ISC"
+}
