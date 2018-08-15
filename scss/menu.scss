@@ -1,0 +1,15 @@
+.aside-nav-btn {
+    position: absolute;
+    right: 35px;
+    top: 35px;
+    z-index: 2;
+    cursor: pointer;
+    @include fadein;
+    .asidenav-icon {
+        width: 35px;
+        height: 3px;
+        margin: 0px 0px 5px 0px;
+        background: #fff;
+        @include fadein;
+    }
+}

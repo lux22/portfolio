@@ -1,4 +1,66 @@
-$primary-color:#ddd;
+@import "_config.scss";
+@import "menu.scss";
+* {
+  box-sizing: border-box;
+}
+
 body {
-    background: $primary-color;
+  @include bgimage;
+  background: $primary-color;
+  color: #fff;
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+  &.portfolio-heading-lg {
+    font-size: 6rem;
+  }
+  &.portfolio-heading-sm {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: lighten($primary-color, 2);
+  }
+}
+
+a {
+  color: #ffff;
+  text-decoration: none;
+}
+
+header {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+}
+
+.secondary-color {
+  color: $secondary-color;
+}
+
+main {
+  padding: 4rem;
+  height: 100%;
+  .portfolio-social-icon {
+    margin-top: 1rem;
+    a {
+      padding: 0.4rem;
+      &:hover {
+        color: $secondary-color;
+        @include fadein;
+      }
+    }
+  }
+  &#home {
+    overflow: hidden;
+    h1 {
+      margin-top: 20vh;
+    }
+  }
 }

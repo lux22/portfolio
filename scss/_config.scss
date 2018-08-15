@@ -1,0 +1,28 @@
+$primary-color: #444;
+$secondary-color: #eece1a;
+$background-image: true;
+$portfolio-bg-image: url(../images/portfolio-bg.jpg);
+$portfolio-bg-opacity: 0.9;
+@mixin fadein {
+    transition: all 0.5s ease-out;
+}
+
+@mixin bgimage {
+    @if $background-image {
+        &#bg-image {
+            background-image: $portfolio-bg-image;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: rgba($primary-color, $portfolio-bg-opacity);
+        }
+    }
+}
