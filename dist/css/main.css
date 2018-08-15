@@ -11,6 +11,14 @@
     margin: 0px 0px 5px 0px;
     background: #fff;
     transition: all 0.5s ease-out; }
+  .aside-nav-btn.close {
+    transform: rotate(180deg); }
+    .aside-nav-btn.close .asidenav-icon:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px); }
+    .aside-nav-btn.close .asidenav-icon:nth-child(2) {
+      opacity: 0; }
+    .aside-nav-btn.close .asidenav-icon:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -5px); }
 
 * {
   box-sizing: border-box; }
