@@ -155,3 +155,33 @@ main {
 
 .aside-menu-item:nth-child(3) {
   transition-delay: 0.3s; }
+
+@media screen and (max-width: 768px) {
+  main {
+    text-align: center;
+    align-items: center; }
+    main .portfolio-heading-lg {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  div.aside-menu-nav,
+  div.aside-menu-image {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    div.aside-menu-nav.show,
+    div.aside-menu-image.show {
+      transform: translate3d(0, 0, 0); }
+  .aside-menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .aside-menu-image {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+    .aside-menu-image .aside-round-image {
+      width: 150px;
+      height: 150px; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; } }
