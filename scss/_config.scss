@@ -26,3 +26,12 @@ $portfolio-bg-opacity: 0.9;
         }
     }
 }
+
+@function changecolor($color) {
+    @if (lightness($color) > 40) {
+        @return #000;
+    }
+    @else {
+        @return #fff;
+    }
+}

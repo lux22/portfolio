@@ -5,7 +5,7 @@
 body {
     @include bgimage;
     background: $primary-color;
-    color: #fff;
+    color: changecolor($primary-color);
     height: 100%;
     margin: 0;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -28,7 +28,7 @@ h3 {
 }
 
 a {
-    color: #ffff;
+    color: changecolor($primary-color);
     text-decoration: none;
 }
 
@@ -43,8 +43,8 @@ header {
 }
 
 main {
-    padding: 4rem;
-    height: 100%;
+    padding: 4rem; // height: 100%;
+    min-height: calc(100vh - 50px);
     .portfolio-social-icon {
         margin-top: 1rem;
         a {
@@ -61,4 +61,86 @@ main {
             margin-top: 20vh;
         }
     }
+}
+
+.protfolio-about {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: "portimage port-bio port-bio" "port-job1 port-job2 port-job3";
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 2rem;
+    .portfolio-about-image {
+        grid-area: portimage;
+        margin: auto;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        border: $secondary-color 3px solid;
+    }
+    .portfolio-bio {
+        grid-area: port-bio;
+        font-size: 1.5rem;
+    }
+    .portfolio-about-job1 {
+        grid-area: port-job1;
+    }
+    .portfolio-about-job2 {
+        grid-area: port-job2;
+    }
+    .portfolio-about-job3 {
+        grid-area: port-job3;
+    }
+    .portfolio-about-job {
+        background: lighten($primary-color, 3);
+        padding: 0.5rem;
+        border-bottom: $secondary-color 2px solid;
+    }
+}
+
+.portfolio-project {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.5rem;
+    img {
+        width: 100%;
+        border: #fff 3px solid;
+        &:hover {
+            opacity: 0.98;
+            border-color: $secondary-color;
+            @include fadein;
+        }
+    }
+}
+
+.portfolio-btn {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 1rem;
+    @include fadein;
+    &:hover {
+        background: $secondary-color;
+        color: changecolor($secondary-color);
+    }
+}
+
+.portfolio-project-btn-dark {
+    @extend .portfolio-btn;
+    background: darken($primary-color, 50);
+    color: #fff;
+}
+
+.portfolio-project-btn-light {
+    @extend .portfolio-btn;
+    background: lighten($primary-color, 50);
+    color: #fff;
+}
+
+#portfolio-footer {
+    padding: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+    background: darken($primary-color, 10);
+    color: chagecolor($primary-color);
+    height: 50px;
 }
