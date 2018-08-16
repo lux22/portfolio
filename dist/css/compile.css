@@ -2,7 +2,7 @@
   box-sizing: border-box; }
 
 body {
-  background: #444;
+  background: #521f38;
   color: #fff;
   height: 100%;
   margin: 0;
@@ -20,7 +20,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: rgba(68, 68, 68, 0.9); }
+    background: rgba(82, 31, 56, 0.8); }
 
 h1,
 h2,
@@ -36,7 +36,7 @@ h3 {
   h3.portfolio-heading-sm {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: #494949; }
+    background: #59223d; }
 
 a {
   color: #fff;
@@ -59,6 +59,7 @@ main {
       padding: 0.4rem; }
       main .portfolio-social-icon a:hover {
         color: #eece1a;
+        padding: 1rem;
         transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
@@ -88,7 +89,7 @@ main {
   .protfolio-about .portfolio-about-job3 {
     grid-area: port-job3; }
   .protfolio-about .portfolio-about-job {
-    background: #4c4c4c;
+    background: #5d2340;
     padding: 0.5rem;
     border-bottom: #eece1a 2px solid; }
 
@@ -119,15 +120,35 @@ main {
   color: #fff; }
 
 .portfolio-project-btn-light {
-  background: #c4c4c4;
+  background: #d898b7;
   color: #fff; }
+
+.portfolio-contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 1rem; }
+  .portfolio-contact div {
+    padding: 1.5rem 2rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    border: 3px #fff solid;
+    transition: all 0.5s ease-out; }
+    .portfolio-contact div:hover {
+      padding: 0.5rem 1rem;
+      background: #eece1a;
+      color: #000; }
+      .portfolio-contact div:hover span {
+        background: #eece1a;
+        color: #000; }
 
 #portfolio-footer {
   padding: 1rem;
   margin-top: 2rem;
   text-align: center;
-  background: #2b2b2b;
-  color: chagecolor(#444);
+  background: #2d111f;
+  color: chagecolor(#521f38);
   height: 50px; }
 
 .aside-nav-btn {
@@ -156,7 +177,7 @@ main {
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.96;
+  opacity: 0.9;
   visibility: hidden; }
   .aside-menu.show {
     visibility: visible; }
@@ -174,14 +195,14 @@ main {
   .aside-menu-nav {
     margin: 0;
     padding: 0;
-    background: #373737;
+    background: #3f182b;
     transform: translate3d(0, -100%, 0); }
     .aside-menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .aside-menu-list {
     list-style: none; }
   .aside-menu-image {
-    background: #444;
+    background: #521f38;
     transform: translate3d(0, 100%, 0); }
     .aside-menu-image.show {
       transform: translate3d(0, 0, 0); }
@@ -256,7 +277,9 @@ main {
     .aside-menu-image .aside-round-image {
       width: 150px;
       height: 150px; }
-  #about h1 {
+  #about h1,
+  #project h1,
+  #contact h1 {
     margin-top: 10vh; }
   .protfolio-about {
     grid-template-areas: "portimage" "port-bio" "port-job1" "port-job2" "port-job3";

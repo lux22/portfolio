@@ -1,8 +1,8 @@
-$primary-color: #444;
+$primary-color: rgb(82, 31, 56);
 $secondary-color: #eece1a;
 $background-image: true;
 $portfolio-bg-image: url(../images/portfolio-bg.jpg);
-$portfolio-bg-opacity: 0.9;
+$portfolio-bg-opacity: 0.8;
 @mixin fadein {
     transition: all 0.5s ease-out;
 }

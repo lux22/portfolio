@@ -1,66 +1,68 @@
 @include screen-size-Xl {
-  .portfolio-project {
-    grid-template-columns: repeat(4, 1fr);
-  }
+    .portfolio-project {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 @include screen-size-Lg {
-  .portfolio-project {
-    grid-template-columns: repeat(3, 1fr);
-  }
+    .portfolio-project {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @include screen-size-Md {
-  main {
-    text-align: center;
-    align-items: center;
-    transform: translate(-100%, 0, 0, 0);
-    .portfolio-heading-lg {
-      line-height: 1;
-      margin-bottom: 1rem;
+    main {
+        text-align: center;
+        align-items: center;
+        transform: translate(-100%, 0, 0, 0);
+        .portfolio-heading-lg {
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
     }
-  }
-  div.aside-menu-nav,
-  div.aside-menu-image {
-    float: none;
-    width: 100%;
-    min-height: 0;
-    &.show {
-      transform: translate3d(0, 0, 0);
+    div.aside-menu-nav,
+    div.aside-menu-image {
+        float: none;
+        width: 100%;
+        min-height: 0;
+        &.show {
+            transform: translate3d(0, 0, 0);
+        }
     }
-  }
-  .aside-menu-nav {
-    height: 75vh;
-    transform: translate3d(-100%, 0, 0);
-    font-size: 24px;
-  }
-  .aside-menu-image {
-    height: 25vh;
-    transform: translate3d(100%, 0, 0);
-    .aside-round-image {
-      width: 150px;
-      height: 150px;
+    .aside-menu-nav {
+        height: 75vh;
+        transform: translate3d(-100%, 0, 0);
+        font-size: 24px;
     }
-  }
-  #about {
-    h1 {
-      margin-top: 10vh;
+    .aside-menu-image {
+        height: 25vh;
+        transform: translate3d(100%, 0, 0);
+        .aside-round-image {
+            width: 150px;
+            height: 150px;
+        }
     }
-  }
-  .protfolio-about {
-    grid-template-areas: "portimage" "port-bio" "port-job1" "port-job2" "port-job3";
-    grid-template-columns: 1fr;
-  }
-  .portfolio-project {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    #about,
+    #project,
+    #contact {
+        h1 {
+            margin-top: 10vh;
+        }
+    }
+    .protfolio-about {
+        grid-template-areas: "portimage" "port-bio" "port-job1" "port-job2" "port-job3";
+        grid-template-columns: 1fr;
+    }
+    .portfolio-project {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @include screen-size-Sm {
-  main#home h1 {
-    margin-top: 10vh;
-  }
-  .portfolio-project {
-    grid-template-columns: repeat(1, 1fr);
-  }
+    main#home h1 {
+        margin-top: 10vh;
+    }
+    .portfolio-project {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
